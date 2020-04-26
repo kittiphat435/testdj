@@ -1,0 +1,21 @@
+{% extends "mobile/base.html" %}
+{% load crispy_forms_tags %}
+
+	{% block content %}
+
+	<h1>แจ้งปัญหากับเรา</h1>
+	<p> ติดต่อช่องทางนี้/p>>
+	{% endblock content %}
+
+
+
+	{% block content_mobile %}
+		<form method="post">
+			{% csrf_token %}
+			{{ forms | crispy }}
+			<button type="submit"> Submit </button>
+
+		</form>
+	{% endblock content_mobile %}
+
+

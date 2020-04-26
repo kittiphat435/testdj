@@ -40,7 +40,10 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'ems-page'%}">EMS</a>
-      </li>    
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'ask-page'%}">AskQA</a>
+      </li> 
     </ul>
   </div>  
 </nav>
@@ -67,17 +70,8 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>Iphone XS</h2>
-      
-      <div><img src="{% static 'mobile/1.jpg' %}" width=" 400"> </div>
-      <p>โปรยาวๆ </p>
-      <p>จอภาพ OLED แบบเฉพาะขนาด 5.8 นิ้ว บน iPhone XS ถ่ายทอดสีสันได้อย่างแม่นยำ ทั้งยังมาพร้อม HDR, สีดำที่ดำสนิทและคอนทราสต์ที่สูง¹.</p>
-      <br>
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      {% block content_mobile %}
+      {% endblock content_mobile %}
     </div>
   </div>
 </div>

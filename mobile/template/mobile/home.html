@@ -1,6 +1,26 @@
 {% extends "mobile/base.html" %}
 
-{% block content %}
-<h1>หน้าหลักนะจ๊ะ</h1>
-<p> มาเถอะของจริง เชื่อถือได้</p>>
-{% endblock content %}
+	{% block content %}
+
+	<h1>หน้าหลักนะจ๊ะ</h1>
+	<p> มาเถอะของจริง เชื่อถือได้</p>>
+	{% endblock content %}
+
+
+
+	{% block content_mobile %}
+		{% for i,x in mobilelist %}
+			
+			<h1>{{i}}</h1>
+			   <h2>{{x.mobile_name}}</h2>
+			    <h3>{{x.mobile_price}}</h3>  
+			      <div><img src="{{x.mobile_photo.url}}" width=" 400"> </div>
+			      <p>{{x.mobile_detail}}</p>
+			      <p>จอภาพ OLED แบบเฉพาะขนาด 5.8 นิ้ว บน iPhone XS ถ่ายทอดสีสันได้อย่างแม่นยำ ทั้งยังมาพร้อม HDR, สีดำที่ดำสนิทและคอนทราสต์ที่สูง¹.</p>
+			      <br>
+			
+		{% endfor %}
+	{% endblock content_mobile %}
+
+
+
